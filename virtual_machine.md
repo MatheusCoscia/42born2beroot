@@ -1,10 +1,8 @@
-## Criação do Projeto
-
-### Configurando a Máquina Virtual
+## Configurando a Máquina Virtual
 
 <p>A configuração da VM é uma das partes mais simples do projeto e pode ser dividida em duas etapas, sendo elas a instalação de um sistema operacional dentro da VM e sua configuração.</p>
 
-##### Escolhendo o Sistema Operacional
+#### Escolhendo o Sistema Operacional
 
 <p>Caso você não possua um software de virtualização em seu computador é recomendável a utilização do <a href="https://www.virtualbox.org">VirtualBox</a>. Lembre-se de ativar a opção de virtualização na BIOS de seu computador.</p>
 <p>Após da instalação de seu software de virtualização, você deve escolher o sistema operacional com o qual irá criar seu servidor.</p>
@@ -43,7 +41,7 @@
 <br>
 <p>Ao finalizar essa etapa sua VM está pronta para ser inciado e você pode começar a instalação e a configuração de seu Sistema Operacional.</p><br>
 
-##### Instalação e Configuração do Sistema Operacional
+#### Instalação e Configuração do Sistema Operacional
 
 <p>A instalação e configuração do Debian é simples, mas pode dar um pouco de dor de cabeça caso seu software de virtualização esteja desatualizado ou você esqueça sua senha de criptografia.</p>
 <br>

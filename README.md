@@ -2,7 +2,7 @@
 
 <p>O projeto b2br consiste na criação de um servidor em Máquina Virtual (VM).</p>
 <p>Durante a realização do projeto, além de todas as configurações exigidas durante a criação de uma VM, também iremos realizar a configuração de um servidor.</p>
-<p>É de extrema importância ressaltar que as etapas aqui apresentadas <b>não englobam</b> o bônus do projeto.</p>
+<p>É de extrema importância ressaltar que as etapas aqui apresentadas <b>não englobam</b> o bônus do projeto, entrentato, caso você deseje, é possível realizar a etapa de repartição de memória presente no bônus, somente para ganhar pontos.</p>
 
 ### Configurações da Virtual Machine
 
