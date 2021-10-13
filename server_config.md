@@ -37,6 +37,8 @@ $	lsblk
 $	apt-get update
 ```
 
+<br>
+
 #### ~Configuração e Instalação do Sudo
 
 ##### Instalando o Sudo
