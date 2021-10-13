@@ -21,6 +21,7 @@
 <p>Após a finalização das etapas acima o jogo começa de verdade! A partir daqui todas as configurações e adições devem seguir o que é pedido no PDF entregue pela 42.</p>
 
 > Crie um *Hostname*, sendo que este deve ser seu Login + 42
+
 ![alt text](https://user-images.githubusercontent.com/82785772/136550067-b2c83493-613f-4d94-8f63-417c9e67ea3d.png)
 
 ### Configurando nosso Servidor
