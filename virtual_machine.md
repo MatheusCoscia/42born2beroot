@@ -94,15 +94,15 @@ Vale ressaltar que está será a<b>partição responsável pelo boot</b>da máqu
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136551651-67fac43f-ed2b-4d67-bd04-1630c93c37c3.png)
 
-> Selecione<b>Primária</b>como o tipo da instalação e a defina como<b>Inicial*.
+> Selecione <b>Primária</b> como o tipo da instalação e a defina como <b>Inicial</b>.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136551689-bcb8600c-3f57-48f4-a9f0-ebf37c1effd6.png)
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136551722-be4c467f-5461-4074-a0a7-935260a3f1bd.png)
 
 > Nesta etapa será necessário definir dois parâmetros, não sendo necessário alterar os demais.<br>
-Em<b>Usar Como*, defina<b>ext4 "journaling"*.<br>
-Em<b>Ponto de Montagem*, defina<b>/boot*.
+Em <b>Usar Como</b>, defina <b>ext4 "journaling"</b>.<br>
+Em <b>Ponto de Montagem"</b>, defina <b>/boot"</b>.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136551841-2292350a-d963-43a7-a6eb-c936455c854f.png)
 
@@ -118,9 +118,9 @@ Em<b>Ponto de Montagem*, defina<b>/boot*.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136552139-5b2912a7-e03d-4e1d-8fbf-2325fd01a834.png)
 
-> Selecione<b>Lógica</b>como o tipo da instalação e novamente defina dois parâmetros, não sendo necessário alterar os demais.<br>
-Em<b>Usar Como*, defina<b>ext4 "journaling"*.<br>
-Em<b>Ponto de Montagem*, defina<b>nenhum*.
+> Selecione <b>Lógica</b> como o tipo da instalação e novamente defina dois parâmetros, não sendo necessário alterar os demais.<br>
+Em <b>Usar Como</b>, defina <b>ext4 "journaling"</b>.<br>
+Em <b>Ponto de Montagem</b>, defina <b>nenhum</b>.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136552176-3d0e4e1d-050f-4ed8-8f6e-c6365ee6a45a.png)
 
@@ -130,11 +130,11 @@ Em<b>Ponto de Montagem*, defina<b>nenhum*.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136552330-04b3ea61-5a99-453b-bf97-03dbe38d18f2.png)
 
-> Selecione a configuração de<b>volumes encriptografados</b>e em seguida selecione<b>sim*.
+> Selecione a configuração de <b>volumes encriptografados</b> e em seguida selecione <b>sim</b>.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136552434-0763b7cb-1014-4e75-8dc9-b37e05c02ac1.png)
 
-> Crie um novo volume encriptografado, selecionando o<b>slot sda5</b>e finalize o processo sem efetuar nenhuma alteração.<br>
+> Crie um novo volume encriptografado, selecionando o <b>slot sda5</b> e finalize o processo sem efetuar nenhuma alteração.<br>
 Caso você faça a seleção incorreta da repartição sua máquina apresentará erros futuros.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136552584-796e0334-5999-45aa-992a-fa0ec111e9ce.png)
@@ -147,20 +147,20 @@ Caso você faça a seleção incorreta da repartição sua máquina apresentará
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136552777-9a2c9873-e8a4-469d-9adb-eee3c9ae90c7.png)
 
-> Selecione<b>sim</b>e faça a exclusão dos dados.
+> Selecione <b>sim</b> e faça a exclusão dos dados.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136552836-f063c5e4-df65-4efe-9670-550f8817fbac.png)
 
 > Crie uma senha/frase para a criptação dos dados.<br>
-Lembre-se de seguir a<b>política de senhas*.
+Lembre-se de seguir a <b>política de senhas</b>.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136555188-8f93f984-6005-4f21-ad11-1165a915d2b4.png)
 
-> Selecione a opção<b>Configuração de volumes lógicos</b>e em seguida selecione<b>sim*.
+> Selecione a opção <b>Configuração de volumes lógicos</b> e em seguida selecione <b>sim</b>.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136555493-df677dae-705e-4369-92bd-aad2c28cb0e1.png)
 
-> Crie um novo<b>grupo de volumes*, sendo que seu nome deverá ser<b>LVMGroup*.
+> Crie um novo <b>grupo de volumes</b>, sendo que seu nome deverá ser <b>LVMGroup</b>.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136555670-2e93f591-ae81-4034-bf3a-28cafd6e0e88.png)
 
@@ -172,7 +172,7 @@ Caso você faça a seleção incorreta da repartição sua máquina apresentará
 ![alt text](https://user-images.githubusercontent.com/82785772/136556110-c06b5407-d7cd-4226-8b97-5a67fa903ab7.png)
 
 > Após criar o grupo de volumes lógicos, iremos criar os volumes em si.<br>
-Na opção<b>Criar volume lógico*, selecione o grupo que foi criado e em seguida adicione um nome e a quantidade de memória ao novo volume lógico. Os volumes criados deverão ser:<br>
+Na opção <b>Criar volume lógico</b>, selecione o grupo que foi criado e em seguida adicione um nome e a quantidade de memória ao novo volume lógico. Os volumes criados deverão ser:<br>
 xxx--vg-root, utilizando 2.8GB de memória.<br>
 xxx--vg-swap_1, utilizando 976MB de memória.<br>
 xxx--vg-home, utilizando 3.8MB de memória.
@@ -190,9 +190,9 @@ xxx--vg-home, utilizando 3.8MB de memória.
 ![alt text](https://user-images.githubusercontent.com/82785772/136557910-397f3477-a167-4a3a-b21a-eac789b87afb.png)
 
 > Após a criação de todos nosso volumes lógicos, iremos configura-los, alterando seu<b>Modo de uso</b>e seu<b>Ponto de montagem*. Vale lembrar que os demais itens não devem ser alterados.<br>
-Defina seu root como:<b>Modo de uso =<b>ext4 "journaling"*;<b>Ponto de montagem = /*.<br>
-Defina seu swap como:<b>Modo de uso =<b>swap area"*.<br>
-Defina seu home como:<b>Modo de uso =<b>ext4 "journaling"*;<b>Ponto de montagem = /home*.
+Defina seu root como: Modo de uso = <b>ext4 "journaling"</b>; <b>Ponto de montagem = /</b>.<br>
+Defina seu swap como: Modo de uso = <b>swap area"</b>.<br>
+Defina seu home como: Modo de uso = <b>ext4 "journaling"</b>; <b>Ponto de montagem = /home</b>.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136558144-cd9b9ed8-8728-4010-9653-136437e5a224.png)
 
@@ -200,13 +200,13 @@ Defina seu home como:<b>Modo de uso =<b>ext4 "journaling"*;<b>Ponto de montagem 
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136558531-193ebab2-9118-4981-9f1f-4a86b166bb7c.png)
 
-> Finalzie essa etapa de configuração dos volumes lógicos e em seguida clique em<b>sim*.
+> Finalzie essa etapa de configuração dos volumes lógicos e em seguida clique em <b>sim</b>.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136559512-7ec023c7-be64-4b7e-b3ff-456cc0e9d03d.png)
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136560590-c8e0cf41-7beb-46cf-8e66-a0d5a7aac138.png)
 
-> Após essa etapa clique em<b>não*.<br>
+> Após essa etapa clique em <b>não</b>.<br>
 Caso você faça a seleção incorreta sua máquina apresentará erros futuros.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136578558-fdf40607-617a-4c5c-bc16-1862d5df93d2.png)
@@ -218,11 +218,11 @@ Caso sua VM esteja desatualizada a instalação dará erro.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136582899-f896a260-6a58-44dd-b2e7-de861f86cc7e.png)
 
-> Caso deseje, informe o<b>Proxy*.
+> Caso deseje, informe o <b>Proxy</b>.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136582976-2bbaa7e0-f6aa-49f6-98de-d9de061c10f1.png)
 
-> Após essa etapa clique em<b>não*.<br>
+> Após essa etapa clique em <b>não</b>.<br>
 Caso você faça a seleção incorreta sua máquina apresentará erros futuros.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136585259-4abcdcd3-256e-4efa-a2cd-a7ae0060796f.png)
@@ -231,7 +231,7 @@ Caso você faça a seleção incorreta sua máquina apresentará erros futuros.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136585483-ce5d453d-b18e-44da-99a8-1a409c663776.png)
 
-> Para realizar a instalação do GRUB seguida clique em<b>sim</b>e selecione o dispositivo a ser instalado.
+> Para realizar a instalação do GRUB seguida clique em <b>sim</b> e selecione o dispositivo a ser instalado.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136585889-f8174a96-cb90-4f02-a081-4043d214ddc0.png)
 
