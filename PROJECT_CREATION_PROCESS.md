@@ -28,7 +28,7 @@
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136550144-c367b72a-5a64-443c-9886-7cf3ac7198af.png)
 
-> Crie uma senha para o root, lembrando de seguir a política de senha.<br>
+> Crie uma senha para o root, lembrando de seguir a *política de senha*.<br>
 Caso você não tenha criatividade utilize a senha 123Qwedsaz.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136550617-6859ea60-e521-4eaf-8e41-e7cfa2e63705.png)
@@ -43,6 +43,41 @@ Caso você não tenha criatividade utilize a senha 123Qwedsaz.
 Caso você tenha selecionado o idioma inglês tente localizar um dos fusos mais próximos ao do Brasil.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136551018-fa4378d4-b2b7-4453-a38d-c4bbc2568c12.png)
+
+> Inicie o *particionamento de memória*, selecionando o modo manual.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136551102-35e56aab-10bf-4676-9c51-130f72ca67b4.png)
+
+> Selecione uma unidade de memória e confirme clicando em *sim*.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136551254-df0d978a-a8db-4858-951b-f74dacdb3862.png)
+
+> Selecione o *espaço livre* e *crie uma nova partição*.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136551406-3f0b0b9c-263f-4c40-b222-14dc77b4eda6.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136551458-3f43c36d-f79a-4311-8b4c-0627175b098e.png)
+
+> Defina a *quantidade de memória* que a primeira partição irá utilizar.<br>
+Vale ressaltar que está será a *partição responsável pelo boot* da máquina, logo, 500MB serão suficientes para essa ação.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136551651-67fac43f-ed2b-4d67-bd04-1630c93c37c3.png)
+
+> Selecione *Primária* como o tipo da instalação e a defina como *Inicial*.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136551689-bcb8600c-3f57-48f4-a9f0-ebf37c1effd6.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136551722-be4c467f-5461-4074-a0a7-935260a3f1bd.png)
+
+> Nesta etapa será necessário definir dois parâmetros, não sendo necessário alterar os demais.<br>
+Em *Usar Como*, defina *ext4 "journaling"*.<br>
+Em *Ponto de Montagem*, defina */boot*.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136551841-2292350a-d963-43a7-a6eb-c936455c854f.png)
+
+> Finalize a partição do boot.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136551976-bb7f4e8a-6b29-4b0e-9a1b-9647fba64c53.png)
 
 ### Configurando nosso Servidor
 
