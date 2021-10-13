@@ -5,15 +5,13 @@
 
 #### Configurações Básicas
 
-##### Sistema Operacionaç
+##### Sistema Operacional
 
 <p>Consulte o sistema operacional instalado em sua VM.</p>
 
 ```
-	# consultar as somente as linhas que informam o sistema
-$	head -n 2 /etc/os-release
-	# consultar o arquivo em sua totalidade
-$	cat /etc/os-release
+$	head -n 2 /etc/os-release	# consultar as somente as linhas que informam o sistema
+$	cat /etc/os-release			# consultar o arquivo em sua totalidade
 ```
 
 ##### Repartição de Memória
@@ -24,4 +22,18 @@ $	cat /etc/os-release
 $	lsblk
 ```
 
-<p>Caso ocorra alguma divergência entre sua repartição de memória e a informada pelo PDF do projeto será necessário recomeçar o processo de criação da VM.</p>
+<p>Caso ocorra alguma divergência entre sua repartição de memória e a informada pelo PDF do projeto será necessário recomeçar o processo de criação da VM.</p><br>
+
+#### Gerenciador de Pacotes
+
+<p>O <b>apt</b> é um gerenciador de pacotes de nível inferior, que se restringe as linhas de comando, não possuindo uma interface gráfica.</p>
+<p>Mesmo com duas opções de gerenciadores de pacotes, o <b>apt já vem instalado como gerenciador padrão no Debian</b>.</p>
+
+##### Conferindo a Instalação do apt
+
+<p>Sendo o gerenciador de pacotes padrão do Debian é necessário somente verificar sua instalação.</p>
+
+```
+$	apt-get update
+```
+
