@@ -6,6 +6,7 @@
 #### Configurações Básicas
 
 <p>Confira se o particionamento de memória esta correto através do comando lsblk.</p>
+
 ```
 $	lsblk
 ```
