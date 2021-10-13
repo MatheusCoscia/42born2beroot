@@ -10,7 +10,35 @@
 <p>Após da instalação de seu software de virtualização, você deve escolher o sistema operacional com o qual irá criar seu servidor.</p>
 <p>Caso você ainda não possua experiência com esse tipo de atividade é extremamente recomendável utilizar o sistema <a href="https://www.debian.org/download">Linux Debian</a>. Caso você já tenha experiência, sinta-se livre para aventurar-se no sistema <a href="https://www.centos.org/download">Linux CentOs</a>.</p>
 <br>
-<p>Agora é o momento de iniciar a criação de sua Máquina Virtual! Não tem mistério e nenhum segredo mirabolante e eu recomendo seguir <a href="https://www.treinaweb.com.br/blog/criando-uma-maquina-virtual-com-a-virtualbox">este tutorial</a>.</p><br>
+<p>Agora é o momento de iniciar a criação de sua Máquina Virtual! Não tem mistério e nenhum segredo mirabolante só é preciso se atentar a algumas etapas.</p>
+
+> No painel do seu software de virtualização, selecione <b>NOVO</b>, ou precione ctrl + n.
+
+![image](https://user-images.githubusercontent.com/87319964/137205713-ae3624c4-cb64-440f-9ae5-a33ec3d4d86e.png)
+
+> Escolha o sistema operacional, no nosso caso, usaremos o <b>Linux Debian (64bit)</b>.
+
+![image](https://user-images.githubusercontent.com/87319964/137205861-6d68f559-b123-4348-81f5-793bee1b39fb.png)
+
+> Selecione a quantidade de memória a ser utilizada, sendo recomendo entre 1GB ou 2GB.
+
+![image](https://user-images.githubusercontent.com/87319964/137205947-e24fb931-1233-4f2d-ba23-b84c1d79ace9.png)
+
+> Crie um novo disco rígido virtual e clique em criar.
+
+![image](https://user-images.githubusercontent.com/87319964/137206027-61b1bbba-6efc-4d18-b3ac-542e5183f849.png)
+
+> No painel do seu software de virtualização, selecione <b>CONFIGURAÇÕES</b>.
+
+![image](https://user-images.githubusercontent.com/87319964/137205713-ae3624c4-cb64-440f-9ae5-a33ec3d4d86e.png)
+
+> Na aba <b>Armazenamento</b>, clique no ícone <b>Vazio</b> e no canto superior direito selecione o ícone do cd, para que você possa escolher uma nova imagem de disco.
+
+![image](https://user-images.githubusercontent.com/87319964/137206343-9f5b2836-6500-4fd8-8a66-1266bc92d5f4.png)
+
+> Após, na aba <b>Rede</b>, conecte sua VM a <b>Placa em modo Bridge</b>.
+
+![image](https://user-images.githubusercontent.com/87319964/137206441-ff630ccb-c00b-4d6d-a1ad-2e1653975798.png)
 
 ##### Instalação e Configuração do Sistema Operacional
 
@@ -214,6 +242,3 @@ Caso você faça a seleção incorreta sua máquina apresentará erros futuros.
 
 <p><a href="https://github.com/vangoncalez/42sp_borntoberoot">vangoncalez</a><br>
 Vanessa Gonçaez</p>
-
-<p>MCoscia<br>
-Matheus Coscia / / designer gráfico</p>
