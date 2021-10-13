@@ -28,7 +28,7 @@
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136550144-c367b72a-5a64-443c-9886-7cf3ac7198af.png)
 
-> Crie uma senha para o root, lembrando de seguir a política de senha.
+> Crie uma senha para o root, lembrando de seguir a política de senha.<br>
 Caso você não tenha criatividade utilize a senha 123Qwedsaz.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136550617-6859ea60-e521-4eaf-8e41-e7cfa2e63705.png)
@@ -39,7 +39,7 @@ Caso você não tenha criatividade utilize a senha 123Qwedsaz.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136550862-d74698b3-52f0-498b-b5af-c20c5be80584.png)
 
-> Configure o fuso horário de sua máquina.
+> Configure o fuso horário de sua máquina.<br>
 Caso você tenha selecionado o idioma inglês tente localizar um dos fusos mais próximos ao do Brasil.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136551018-fa4378d4-b2b7-4453-a38d-c4bbc2568c12.png)
