@@ -120,10 +120,100 @@ Caso você faça a seleção incorreta da repartição sua máquina apresentará
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136552836-f063c5e4-df65-4efe-9670-550f8817fbac.png)
 
-### Configurando nosso Servidor
+> Crie uma senha/frase para a criptação dos dados.<br>
+Lembre-se de seguir a *política de senhas*.
 
+![alt text](https://user-images.githubusercontent.com/82785772/136555188-8f93f984-6005-4f21-ad11-1165a915d2b4.png)
+
+> Selecione a opção *Configuração de volumes lógicos* e em seguida selecione *sim*.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136555493-df677dae-705e-4369-92bd-aad2c28cb0e1.png)
+
+> Crie um novo *grupo de volumes*, sendo que seu nome deverá ser *LVMGroup*.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136555670-2e93f591-ae81-4034-bf3a-28cafd6e0e88.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136556019-3a88c6ee-a7f0-4b12-b92d-8a2dd6ef79c9.png)
+
+> Selecione a partição criptografada.<br>
+Caso você faça a seleção incorreta da repartição sua máquina apresentará erros futuros.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136556110-c06b5407-d7cd-4226-8b97-5a67fa903ab7.png)
+
+> Após criar o grupo de volumes lógicos, iremos criar os volumes em si.<br>
+Na opção *Criar volume lógico*, selecione o grupo que foi criado e em seguida adicione um nome e a quantidade de memória ao novo volume lógico. Os volumes criados deverão ser:<br>
+xxx--vg-root, utilizando 2.8GB de memória.<br>
+xxx--vg-swap_1, utilizando 976MB de memória.<br>
+xxx--vg-home, utilizando 3.8MB de memória.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136556173-ba153ece-80fa-4eb1-a389-e065d8779053.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136556215-c55467d2-45e1-4140-85a6-68afc2e72d94.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136556781-6f27d45f-af48-4ffe-a1cf-d0590ee5a399.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136557085-60ab7a27-850b-43cf-b050-4346fcd8a4cb.png)
+
+> Por fim, após realizar a criação de nossos volumes lógicos, clique em finalizar.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136557910-397f3477-a167-4a3a-b21a-eac789b87afb.png)
+
+> Após a criação de todos nosso volumes lógicos, iremos configura-los, alterando seu *Modo de uso* e seu *Ponto de montagem*. Vale lembrar que os demais itens não devem ser alterados.<br>
+Defina seu root como: *Modo de uso = *ext4 "journaling"*; *Ponto de montagem = /*.<br>
+Defina seu swap como: *Modo de uso = *swap area"*.<br>
+Defina seu home como: *Modo de uso = *ext4 "journaling"*; *Ponto de montagem = /home*.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136558144-cd9b9ed8-8728-4010-9653-136437e5a224.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136558404-119fd22d-a65a-4f07-a2d6-6358967cd3e8.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136558531-193ebab2-9118-4981-9f1f-4a86b166bb7c.png)
+
+> Finalzie essa etapa de configuração dos volumes lógicos e em seguida clique em *sim*.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136559512-7ec023c7-be64-4b7e-b3ff-456cc0e9d03d.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136560590-c8e0cf41-7beb-46cf-8e66-a0d5a7aac138.png)
+
+> Após essa etapa clique em *não*.<br>
+Caso você faça a seleção incorreta sua máquina apresentará erros futuros.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136578558-fdf40607-617a-4c5c-bc16-1862d5df93d2.png)
+
+> Selecione o local do gerenciamento dos pacotes.<br>
+Caso sua VM esteja desatualizada a instalação dará erro.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136578618-2a987d7a-8e5e-4b27-915e-c66167d62b54.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136582899-f896a260-6a58-44dd-b2e7-de861f86cc7e.png)
+
+> Caso deseje, informe o *Proxy*.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136582976-2bbaa7e0-f6aa-49f6-98de-d9de061c10f1.png)
+
+> Após essa etapa clique em *não*.<br>
+Caso você faça a seleção incorreta sua máquina apresentará erros futuros.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136585259-4abcdcd3-256e-4efa-a2cd-a7ae0060796f.png)
+
+> Caso algum item tenha sido marcado, retire todas as marcações.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136585483-ce5d453d-b18e-44da-99a8-1a409c663776.png)
+
+> Para realizar a instalação do GRUB seguida clique em *sim* e selecione o dispositivo a ser instalado.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136585889-f8174a96-cb90-4f02-a081-4043d214ddc0.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136586361-8f28255b-d97f-4ed7-bc5c-92853a3039a4.png)
+
+> Finalzie a instalação do Debian e comece a utilizar sua VM.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136586555-1bf0dcd2-6d5b-4886-86ef-7be4f6f97d0c.png)
 
 ##### CRÉDITOS
+
+<p><a href="https://github.com/vangoncalez/42sp_borntoberoot">vangoncalez</a><br>
+Vanessa Gonçaez</p>
 
 <p>MCoscia<br>
 Matheus Coscia / / designer gráfico</p>
