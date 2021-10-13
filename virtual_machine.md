@@ -244,4 +244,4 @@ Caso você faça a seleção incorreta sua máquina apresentará erros futuros.
 ##### CRÉDITOS
 
 <p><a href="https://github.com/vangoncalez/42sp_borntoberoot">vangoncalez</a><br>
-Vanessa Gonçaez</p>
+<a href="https://github.com/Matth0s/42_born2beroot/blob/master/Born2beroot.pdf">matth0s</a></p>
