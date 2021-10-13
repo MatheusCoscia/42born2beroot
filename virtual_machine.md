@@ -189,9 +189,9 @@ xxx--vg-home, utilizando 3.8MB de memória.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136557910-397f3477-a167-4a3a-b21a-eac789b87afb.png)
 
-> Após a criação de todos nosso volumes lógicos, iremos configura-los, alterando seu<b>Modo de uso</b>e seu<b>Ponto de montagem*. Vale lembrar que os demais itens não devem ser alterados.<br>
+> Após a criação de todos nosso volumes lógicos, iremos configura-los, alterando seu <b>Modo de uso</b> e seu<b>Ponto de montagem</b>. Vale lembrar que os demais itens não devem ser alterados.<br>
 Defina seu root como: Modo de uso = <b>ext4 "journaling"</b>; <b>Ponto de montagem = /</b>.<br>
-Defina seu swap como: Modo de uso = <b>swap area"</b>.<br>
+Defina seu swap como: Modo de uso = <b>"swap area"</b>.<br>
 Defina seu home como: Modo de uso = <b>ext4 "journaling"</b>; <b>Ponto de montagem = /home</b>.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136558144-cd9b9ed8-8728-4010-9653-136437e5a224.png)
