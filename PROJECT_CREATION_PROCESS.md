@@ -75,9 +75,50 @@ Em *Ponto de Montagem*, defina */boot*.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136551841-2292350a-d963-43a7-a6eb-c936455c854f.png)
 
-> Finalize a partição do boot.
+> Finalize a partição de memória para o boot.
 
 ![alt text](https://user-images.githubusercontent.com/82785772/136551976-bb7f4e8a-6b29-4b0e-9a1b-9647fba64c53.png)
+
+> No espaço restante de memória livre criaremos uma nova partição, fornecendo-a todo o excedente de memória.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552026-61ae83e1-fec5-418f-b1c5-8ede5bfc2cbf.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552065-ace3c921-4f82-477b-a4fc-52d05afd8a1a.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552139-5b2912a7-e03d-4e1d-8fbf-2325fd01a834.png)
+
+> Selecione *Lógica* como o tipo da instalação e novamente defina dois parâmetros, não sendo necessário alterar os demais.<br>
+Em *Usar Como*, defina *ext4 "journaling"*.<br>
+Em *Ponto de Montagem*, defina *nenhum*.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552176-3d0e4e1d-050f-4ed8-8f6e-c6365ee6a45a.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552257-f926146d-c588-47d5-9133-342f7681469a.png)
+
+> Finalize a partição de memória.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552330-04b3ea61-5a99-453b-bf97-03dbe38d18f2.png)
+
+> Selecione a configuração de *volumes encriptografados* e em seguida selecione *sim*.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552434-0763b7cb-1014-4e75-8dc9-b37e05c02ac1.png)
+
+> Crie um novo volume encriptografado, selecionando o *slot sda5* e finalize o processo sem efetuar nenhuma alteração.<br>
+Caso você faça a seleção incorreta da repartição sua máquina apresentará erros futuros.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552584-796e0334-5999-45aa-992a-fa0ec111e9ce.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552648-e715589d-973e-4252-bf60-41452bcb5011.png)
+
+> Finalize a configuração da partição de memória.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552731-381da4e7-118a-47be-badb-931e9bae813f.png)
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552777-9a2c9873-e8a4-469d-9adb-eee3c9ae90c7.png)
+
+> Selecione *sim* e faça a exclusão dos dados.
+
+![alt text](https://user-images.githubusercontent.com/82785772/136552836-f063c5e4-df65-4efe-9670-550f8817fbac.png)
 
 ### Configurando nosso Servidor
 
