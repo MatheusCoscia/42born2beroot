@@ -5,6 +5,19 @@
 
 #### Configurações Básicas
 
+##### Sistema Operacionaç
+
+<p>Consulte o sistema operacional instalado em sua VM.</p>
+
+```
+	# consultar as somente as linhas que informam o sistema
+$	head -n 2 /etc/os-release
+	# consultar o arquivo em sua totalidade
+$	cat /etc/os-release
+```
+
+##### Repartição de Memória
+
 <p>Confira se o particionamento de memória esta correto através do comando lsblk.</p>
 
 ```
