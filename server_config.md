@@ -94,5 +94,5 @@ $	gpasswd -d <username> sudo
 
 ```
 $	sudo vi etc/sudoers.d/<file>	# acessar as confgs do sudo através do diretório
-$	sudo visudo				# comando para acessar as confgs do sudo
+$	sudo visudo			# comando para acessar as confgs do sudo
 ```
