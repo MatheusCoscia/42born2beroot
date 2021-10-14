@@ -131,3 +131,20 @@ Defaults	requiretty
 ```
 Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 ```
+
+#### ~Configuração e Instalação do SSH
+
+##### Instalando o SSH
+
+<p>Realize a instalação do SSH.</p>
+
+```
+$	#
+```
+
+
+
+##### CRÉDITOS
+
+<p><a href="https://github.com/vangoncalez/42sp_borntoberoot">vangoncalez</a><br>
+<a href="https://github.com/hanshazairi/42-born2beroot#installation">hanshazairi</a></p>
