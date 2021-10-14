@@ -132,9 +132,9 @@ Defaults	requiretty
 Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 ```
 
-#### ~Configuração e Instalação do SSH
+#### ~Configurações do SSH e Firewall (UFW)
 
-##### Instalando o SSH
+##### Instalando e Configurando o SSH
 
 <p>Realize a instalação do SSH.</p>
 
@@ -142,7 +142,17 @@ Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 $	#
 ```
 
+##### Instalando e Configurando o UFW
 
+<p>Realize a instalação do UFW.</p>
+
+```
+$	#
+```
+
+#### ~Política de Senhas
+
+#### ~Cron e Scripts
 
 ##### CRÉDITOS
 
