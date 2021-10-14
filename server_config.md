@@ -10,7 +10,7 @@
 <p>Consulte o sistema operacional instalado em sua VM.</p>
 
 ```
-$	head -n 2 /etc/os-release	# consultar as somente as linhas que informam o sistema
+$	head -n 2 /etc/os-release	# consultar somente as linhas que informam o sistema
 $	cat /etc/os-release		# consultar o arquivo em sua totalidade
 ```
 
@@ -53,4 +53,46 @@ $	apt-get install sudo
 
 ```
 $	dpkg -l | grep sudo
+```
+
+##### Adicionando/Removendo um Úsuario ao Sudo
+
+<p>Adicione o úsuario root ao grupo do Sudo. Esse processo pode ser realizado para adicionar qualquer úsuario ao grupo.</p>
+
+```
+$	gpasswd -a <username> sudo
+```
+
+<p>Verifique se o úsuario foi adicionado corretamente ao grupo Sudo.</p>
+
+```
+$	getent group sudo
+```
+
+<p>Ao adicionar um novo úsuario ao grupo Sudo é necessário reiniciar sua máquina e conferir as instruções do grupo.</p>
+
+```
+$	reboot
+$	sudo -v
+```
+
+<p>Verifique os privilégios do grupo Sudo.</p>
+
+```
+$	sudo apt update
+```
+
+<p>Caso necessário é possível remover um úsuario do grupo Sudo.</p>
+
+```
+$	gpasswd -d <username> sudo
+```
+
+##### Configurando o Sudo
+
+<p>Abra o arquivo de configuração do Sudo, tanto através do comando ou do diretório.</p>
+
+```
+$	sudo vi etc/sudoers.d/<file>	# acessar as confgs do sudo através do diretório
+$	sudo visudo				# comando para acessar as confgs do sudo
 ```
