@@ -100,28 +100,28 @@ $	sudo mkdir /var/log/sudo
 
 ```
 $	sudo visudo -f etc/sudoers.d/<file>	# acessar as confgs do sudo através do diretório
-$	sudo visudo			# comando para acessar as confgs do sudo
+$	sudo visudo				# comando para acessar as confgs do sudo
 ```
 
 <p>Configure as tentativas de autentificações de entrada.</p>
 
 ```
-$	Defaults	passwd_tries = 3
-$	Defaults	badpass_message = "WRONG PASSWORD"
+Defaults	passwd_tries = 3
+Defaults	badpass_message = "WRONG PASSWORD"
 ```
 
 <p>Registre os logins e logouts do grupo.</p>
 
 ```
-$	Defaults	logfile="/var/log/sudo/<filename>"
-$	Defaults	log_input, log_output
-$	Defaults	iolog_dir="/var/log/sudo"
+Defaults	logfile="/var/log/sudo/<filename>"
+Defaults	log_input, log_output
+Defaults	iolog_dir="/var/log/sudo"
 ```
 
-<p>Adicione o Requiretty.</p>
+<p>Adicione o Requiretty, habilitando o modo TTY.</p>
 
 ```
-$	Defaults	requiretty
+Defaults	requiretty
 ```
 
 <p>Por fim, altere o caminho do secure_path.</p>
@@ -129,6 +129,5 @@ $	Defaults	requiretty
 > O antigo caminho será ```secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:```
 
 ```
-$	Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
-
+Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 ```
