@@ -90,9 +90,45 @@ $	gpasswd -d <username> sudo
 
 ##### Configurando o Sudo
 
+<p>Crie um novo diretório para registrar os logins e logouts do grupo.</p>
+
+```
+$	sudo mkdir /var/log/sudo
+```
+
 <p>Abra o arquivo de configuração do Sudo, tanto através do comando ou do diretório.</p>
 
 ```
-$	sudo vi etc/sudoers.d/<file>	# acessar as confgs do sudo através do diretório
+$	sudo visudo -f etc/sudoers.d/<file>	# acessar as confgs do sudo através do diretório
 $	sudo visudo			# comando para acessar as confgs do sudo
+```
+
+<p>Configure as tentativas de autentificações de entrada.</p>
+
+```
+$	Defaults	passwd_tries = 3
+$	Defaults	badpass_message = "WRONG PASSWORD"
+```
+
+<p>Registre os logins e logouts do grupo.</p>
+
+```
+$	Defaults	logfile="/var/log/sudo/<filename>"
+$	Defaults	log_input, log_output
+$	Defaults	iolog_dir="/var/log/sudo"
+```
+
+<p>Adicione o Requiretty.</p>
+
+```
+$	Defaults	requiretty
+```
+
+<p>Por fim, altere o caminho do secure_path.</p>
+
+> O antigo caminho será ```secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:```
+
+```
+$	Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+
 ```
