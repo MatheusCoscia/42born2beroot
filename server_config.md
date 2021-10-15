@@ -203,6 +203,8 @@ $	dpkg -l | grep ufw
 $	ufw status
 ```
 
+<br>
+
 #### ~Configurações de Úsuario
 
 ##### Política de Senha - Tempo de Utilização
@@ -317,7 +319,58 @@ $	getent group user42
 
 <br>
 
-#### ~Cron e Scripts
+#### ~Configuração do Cron
+
+##### Regras do Cron
+
+<p>Acesse as configurações do Cron.</p>
+
+```
+$	crontab -e
+```
+
+<p>Configure uma regra para que um Script seja transmitido a cada 10min.</p>
+
+> Na linha 23 você deverá acrescentar a linha de regras abaixo.
+A antiga regra, que deve ser substituída será: ```23 # m h dom mon dow command```
+
+```
+23		*/10 * * * * sh /path/to/script
+```
+
+##### Script
+
+<p>Crie um novo diretório para armazenar o script que deverá ser transmitido através do Cron.</p>
+
+```
+$	mkdir scripts
+```
+
+<p>Acesse sua nova pasta criada para criar (copiar e colar) um código em Shell que irá transmitir algumas as informações básicas sobre sua VM.</p>
+
+```
+echo -ne "ARCHITECTURE: "; uname -a
+echo -ne "CPU PHYSICAL: "; grep -c processor /proc/cpuinfo
+echo -ne "VIRTUAL CPU: "; cat /proc/cpuinfo | grep processor | wc -l
+echo -ne "MEMORY USAGE: "; free -m | awk 'NR==2{printf "%s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2}'
+echo -ne "DISK USAGE: "; df -h | awk '$NF=="/"{printf "%d/%dGB (%s)\n", $3,$2,$5}'
+echo -ne "CPU LOAD: "; top -bn1 | grep load | awk '{printf"%.2f%%\n", $(NF-2)}'
+echo -ne "LAST BOOT: "; who | awk '{printf $3 }' | tr '\n' ' ' && who | awk '{printf $4}'
+echo -ne "\nLVM USE: "; if cat /etc/fstab | gre -q "/dev/mapper/"; then echo "yes"; else echo "no";fi
+echo -ne "CONNEXIONS TCP: "; cat /proc/net/tcp | wc -l | wak '{print $1-1}' | tr '\n' ' ' && echo "ESTABLISHED"
+echo -ne "USER LOG: "; w | wc -l | awk '{print$1-2}'
+echo -ne "NETWORK: "; echo -n "IP" && ip route list | grep default | wak '{print $3}' | tr '\n' ' ' && echo -n "9" && ip link show | grep link/ether | awk '{print $2}' | tr '\n' ')' && printf "\n"
+echo -ne "SUDO COUNTER: "; journalctl _COMM=sudo | grep COMMAND | wc -l | tr '\n' ' ' && echo Comands
+printf "\n"
+```
+
+<p>Caso você queira testar a funcionalidade do script utilize o código abaixo.</p>
+
+```
+$	crontab -u root -l
+```
+
+<br>
 
 ##### CRÉDITOS
 
