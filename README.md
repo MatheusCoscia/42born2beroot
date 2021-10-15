@@ -14,7 +14,7 @@
 
 ### Avaliação do Projeto
 
-<p>A avaliação do projeto é a etapa mais importante dentro da 42, podendo ser estudada com <a href=https://github.com/MatheusCoscia/42born2beroot/blob/main/evaluation.md">antecedencia</a>.</p>
+<p>A avaliação do projeto é a etapa mais importante dentro da 42, podendo ser estudada com <a href="https://github.com/MatheusCoscia/42born2beroot/blob/main/evaluation.md">antecedencia</a>.</p>
 
 ##### CRÉDITOS
 

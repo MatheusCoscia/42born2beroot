@@ -372,6 +372,11 @@ $	crontab -u root -l
 
 <br>
 
+#### ~Considerações Finais
+
+<p>Após todas as etapas aqui apresentadas seu projeto do born2beroot já estará pronto para entrega, mas não se afobe, algumas etapas ainda devem ser cumpridas para que tudo saia conforme o esperado</p>
+<p>Caso você esteja receoso sobre a avaliação não hesite, <a href="https://github.com/MatheusCoscia/42born2beroot/blob/main/evaluation.md">quem não cola não sai da escola!</a></p><br>
+
 ##### CRÉDITOS
 
 <p><a href="https://github.com/vangoncalez/42born2beroot">vangoncalez</a><br>
