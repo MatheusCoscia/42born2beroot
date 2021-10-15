@@ -17,7 +17,7 @@ $ 	cd Vir...
 $	certUtil -hashfile "file.vdi" sha1
 ```
 
-<p>Após ter acesso ao vdi de sua VM é de extrema importância que você não realize mais nenhuma modificação em seu servidor, portante <b>certifique-se que o projeto está finalizado</b>.</p>
+<p>Após ter acesso ao vdi de sua VM é de extrema importância que você não realize mais nenhuma modificação em seu servidor, portante <b>certifique-se que o projeto está finalizado</b>.</p><br>
 
 #### Parte Obrigatória
 
@@ -71,10 +71,36 @@ A principal diferença entre os dois gerenciadores é sua interface gráfica.
 <br>
 <br>
 
-##### Configuração Simples
+##### Do Utilizador
 
-<p>Verifique se o UFW está ativado.</p>
+<p>Verifique se o úsuario criado pelo avaliador com o nome <login42> está presente nos grupos "sudo" e "user42".</p>
 
-> No terminal execute o comando ```ufw status```.
+> No terminal execute o comando ```getent group user42``` e em seguida o comando ```getent group sudo```.
+
+<br>
+
+<p>Crie um novo úsuario e verifique se a política de senhas fortes está implementada.</p>
+
+> No terminal execute o comando ```adduser <username>```.
+
+<br>
+
+<p>Como você adicionou as regras para criar uma política de senhas?</p>
+
+> No terminal acesse o diretório do libpam-pwquality através do comando ```nano /etc/pam.d/common-password```.
+
+> As regras presentes na linha 25 são responsáveis pela política de senhas, sendo que cada uma delas significa:
+<ol>
+	<ul>
+		<li>retry = quantas vezes posso errar a senha;</li>
+		<li>minlen = temanho minímo da senha;</li>
+		<li>ucredit = quantidade de caracteres em uppercase;</li>
+		<li> dcredit = quantidade de números;</li>
+		<li>maxrepeat = quantas vezes um caractere pode se repetir;</li>
+		<li>reject_username = não permitir que seu username esteja presente na senha;</li>
+		<li>difok = ao alterar a senha, quantos caracteres podem ser iguais;</li>
+		<li>enforce_for_root = não permite que um úsuario altere a senha do root.</li>
+	</ul>
+</ol>
 
 <br>

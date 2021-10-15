@@ -249,14 +249,13 @@ $	apt install libpam-pwquality
 $	nano /etc/pam.d/common-password
 ```
 
-<p>Para instaurar uma política de senhas fortes é necessário acrescebtar algumas regras ao "plugin".</p>
+<p>Para instaurar uma política de senhas fortes é necessário acrescentar algumas regras ao "plugin".</p>
 
 > Na linha 25 você deverá acrescentar a linha de regras abaixo.
 A antiga regra, que deve ser substituída será: ```25 password requisite pam_pwquality.so retry=3```
 
 ```
 25	password	requisite	pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
-
 ```
 
 <p>Por fim, verifique se o "plugin" foi instalado corretamente.</p>
