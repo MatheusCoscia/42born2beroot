@@ -47,6 +47,8 @@ A principal diferença entre os dois gerenciadores é sua interface gráfica.
 
 > No terminal execute o comando ```ufw status```.
 
+[divider height="30"]
+
 <p>Verifique se o SSH está ativado.</p>
 
 > No terminal execute o comando ```service ssh status```.
