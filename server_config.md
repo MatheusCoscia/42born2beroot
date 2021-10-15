@@ -132,6 +132,8 @@ Defaults	requiretty
 Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 ```
 
+<br>
+
 #### ~Configurações do SSH e Firewall (UFW)
 
 ##### Instalando e Configurando o SSH
@@ -139,7 +141,39 @@ Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 <p>Realize a instalação do SSH.</p>
 
 ```
-$	#
+$	apt install openssh-server
+```
+
+<p>Verifique a instalação do SSH.</p>
+
+```
+$	dpkg -l | grep ssh
+```
+
+<p>Acesse o diretório em que o SSH foi instalado e comece a configurar o programa.</p>
+
+```
+$	nano etc/ssh/ssh_config
+```
+
+<p>As configurações do SSH são simples e exigem pequenas alterações nas linahs de código já existentes.</p>
+
+> Na linha 13 teremos o comentário: #Port 22.
+
+```
+13	Port 4242
+```
+
+> Na linha 32 teremos co comentário: #PermitRootLogin prohibit-password.
+
+```
+32	PermitRootLogin no
+```
+
+<p>Por fim verifique se as modificações foram bem sucedidas.</p>
+
+```
+$	service ssh status
 ```
 
 ##### Instalando e Configurando o UFW
@@ -147,10 +181,141 @@ $	#
 <p>Realize a instalação do UFW.</p>
 
 ```
-$	#
+$	apt install ufw
 ```
 
-#### ~Política de Senhas
+<p>Habilite o UFW.</p>
+
+```
+$	ufw enable
+```
+
+<p>Permita conexões ao seu servidor através da porta 4242.</p>
+
+```
+$	ufw allow 4242
+```
+
+<p>Confira as configurações do UFW.</p>
+
+```
+$	dpkg -l | grep ufw
+$	ufw status
+```
+
+#### ~Configurações de Úsuario
+
+##### Política de Senha - Tempo de Utilização
+
+<p>Acesse o diretório em que as configurações de senha estão presentes.</p>
+
+```
+$	nano /etc/login.defs
+```
+
+<p>Para instaurar uma política de senhas fortes é necessário realizar a modificação de alguns parâmetros já pré-estabelecidos pelo Debian.</p>
+
+> Na linha 160 altere o tempo em dias que sua senha ira expirar. Modifique de 99999 para 30.
+
+```
+160		PASS_MAX_DAYS   30
+```
+
+>  Na linha 161 altere o delay em que sua senha poderá ser alterada. Modifique de 0 para 2.
+
+```
+161		PASS_MIN_DAYS   2
+```
+
+>  Na linha 162 adicione uma mensagem de alerta 7 dias antes de sua senha expirar.
+
+```
+162		PASS_WARN_AGE   7
+```
+
+##### Política de Senha - Senha Forte
+
+<p>Realize a instalação do "plugin" libpam-pwquality, responsável por monitorar uma política de senha forte.</p>
+
+```
+$	apt install libpam-pwquality
+```
+
+<p>Acesse o diretório em que o libpam-pwquality foi instalado.</p>
+
+```
+$	nano /etc/pam.d/common-password
+```
+
+<p>Para instaurar uma política de senhas fortes é necessário acrescebtar algumas regras ao "plugin".</p>
+
+> Na linha 25 você deverá acrescentar a linha de regras abaixo.
+A antiga regra, que deve ser substituída será: ```25 password requisite pam_pwquality.so retry=3```
+
+```
+25	password	requisite	pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
+
+```
+
+<p>Por fim, verifique se o "plugin" foi instalado corretamente.</p>
+
+```
+$	dpkg -l | grep libpam-pwquality
+```
+
+##### Verificando seus Úsuarios
+
+<p>Caso seja necessário realizar a criação de um novo úsuario o comando abaixo deverá ser utilizado.</p>
+
+```
+$	adduser <username>
+```
+
+<p>Caso seja necessário realizar a remoção de um úsuario o comando abaixo deverá ser utilizado.</p>
+
+```
+$	deluser <username>
+```
+
+<p>Para verificar a existência de um úsuario é necessário utilizar o código abaixo.</p>
+
+```
+$	getent passwd <username>
+```
+
+<p>Para verificar quanto tempo falta para que uma senha de um úsuario esteja prestes a expirar utilize o código abaixo.</p>
+
+```
+$	chage -l <username>
+```
+
+##### Gerenciando Grupos
+
+<p>Dando continuidade ao projeto, o novo grupo 'user42' deverá ser criado.</p>
+
+```
+$	addgroup user42
+```
+
+<p>Para deletar um grupo já existente é necessário utilizar o código abaixo.</p>
+
+```
+$	delgroup <group_name>
+```
+
+<p>Para verificar a existência de um grupo é necessário acessar o diretório group.</p>
+
+```
+$	cat etc/group
+```
+
+<p>Para verificar se um úsuario foi corretamente adicionado a um grupo utilize o código abaixo.</p>
+
+```
+$	getent group user42
+```
+
+<br>
 
 #### ~Cron e Scripts
 
