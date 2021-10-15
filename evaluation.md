@@ -170,12 +170,39 @@ Além de tudo já visto até aqui, é possível citar como um exemplo de ação 
 
 <br>
 
-<p>Acesse a pasta ```/var/log/sudo``` e verifique se existe o historico de comandos utilizados pelo grupo Sudo.</p>
+<p>Acesse a pasta /var/log/sudo e verifique se existe o historico de comandos utilizados pelo grupo Sudo.</p>
 
 > Acesse a pasta ```/var/log/sudo/00/00``` e confira o historica de comandos.
 
 > Em seu terminal execute o comando ```apt update```.
 
 > Na pasta ```/var/log/sudo/00/00``` confira se um novo diretório foi criado.
+
+<br>
+<br>
+
+##### UFW
+
+<p>Verifique se o UFW está corretamente instalado.</p>
+
+> No terminal execute o comando ```dpkg -l | grep ufw```.
+
+<br>
+
+<p>Verifique se o UFW está funcionando corretamente.</p>
+
+> No terminal execute o comando ```ufw status```.
+
+<br>
+
+<p>O que é o UFW?</p>
+
+> #.
+
+<br>
+
+<p>Adicione a porta 8080 ao UFW e verifique se ela esta ativa.</p>
+
+> No terminal execute o comando ```ufw allow 8080``` e em seguida utilize o comando ```ufw status```.
 
 <br>
