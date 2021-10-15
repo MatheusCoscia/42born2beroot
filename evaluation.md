@@ -122,8 +122,28 @@ A principal diferença entre os dois gerenciadores é sua interface gráfica.
 
 ##### Nome do Host e Partições
 
-<p>Verifique se o úsuario criado pelo avaliador com o nome <login42> está presente nos grupos "sudo" e "user42".</p>
+<p>Verifique se o nome do host está formatado corretamente.</p>
 
-> No terminal execute o comando ```getent group user42``` e em seguida o comando ```getent group sudo```.
+> No terminal execute o comando ```hostname```.
+
+<br>
+
+<p>Redefina o nome do host.</p>
+
+> No terminal execute o comando ```hostnamectl set-hostname <username>```.
+Em seguida utilize o comando ```reboot``` para reiniciar sua VM e conferir o novo hostname.
+
+<br>
+
+<p>Visualize as partições de memória da sua VM.</p>
+
+> No terminal execute o comando ```lsblk```.
+
+<br>
+
+<p>O que é LVM e qual sua função?</p>
+
+> O Gerenciador de Volumes Lógicos é responsável por realizar o gerenciamento do disco rígido através de grupamentos lógicos.
+A vantagem de sua utilização se da graças a facilidade de redimensionamento de memória e modificações gerais.
 
 <br>
