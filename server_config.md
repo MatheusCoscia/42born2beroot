@@ -374,5 +374,5 @@ $	crontab -u root -l
 
 ##### CRÉDITOS
 
-<p><a href="https://github.com/vangoncalez/42sp_borntoberoot">vangoncalez</a><br>
+<p><a href="https://github.com/vangoncalez/42born2beroot">vangoncalez</a><br>
 <a href="https://github.com/hanshazairi/42-born2beroot#installation">hanshazairi</a></p>
