@@ -367,7 +367,7 @@ printf "\n"
 <p>Caso você queira testar a funcionalidade do script utilize o código abaixo.</p>
 
 ```
-$	crontab -u root -l
+$	bash scripts/monitoring.sh
 ```
 
 <br>
