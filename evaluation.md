@@ -73,7 +73,7 @@ A principal diferença entre os dois gerenciadores é sua interface gráfica.
 
 ##### Do Utilizador
 
-<p>Verifique se o úsuario criado pelo avaliador com o nome <login42> está presente nos grupos "sudo" e "user42".</p>
+<p>Verifique se o úsuario criado pelo avaliador com o nome "login42" está presente nos grupos "sudo" e "user42".</p>
 
 > No terminal execute o comando ```getent group user42``` e em seguida o comando ```getent group sudo```.
 
@@ -145,5 +145,37 @@ Em seguida utilize o comando ```reboot``` para reiniciar sua VM e conferir o nov
 
 > O Gerenciador de Volumes Lógicos é responsável por realizar o gerenciamento do disco rígido através de grupamentos lógicos.
 A vantagem de sua utilização se da graças a facilidade de redimensionamento de memória e modificações gerais.
+
+<br>
+<br>
+
+##### Sudo
+
+<p>Verifique se o Sudo está corretamente instalado.</p>
+
+> No terminal execute o comando ```dpkg -l | grep sudo```.
+
+<br>
+
+<p>Adicione seu novo usuário ao grupo Sudo e verifique se a operação ocorreu corretamente.</p>
+
+> No terminal execute o comando ```adduser <username> sudo``` e em seguida utilize o comando ```getent group sudo```.
+
+<br>
+
+<p>O que é o Sudo?</p>
+
+> O sudo é um "super usuário", ou seja, um administrador que pode executar tarefas sem a necessidade do comando ```sudo```.
+Além de tudo já visto até aqui, é possível citar como um exemplo de ação do Sudo o comando ```apt update```.
+
+<br>
+
+<p>Acesse a pasta ```/var/log/sudo``` e verifique se existe o historico de comandos utilizados pelo grupo Sudo.</p>
+
+> Acesse a pasta ```/var/log/sudo/00/00``` e confira o historica de comandos.
+
+> Em seu terminal execute o comando ```apt update```.
+
+> Na pasta ```/var/log/sudo/00/00``` confira se um novo diretório foi criado.
 
 <br>
