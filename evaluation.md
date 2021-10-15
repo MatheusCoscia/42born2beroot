@@ -27,19 +27,28 @@ $	certUtil -hashfile "file.vdi" sha1
 
 > A VM, através do hardware do seu computador, irá emular um sistema operacional em um ambiente controlado de teste, sem interferir nos dados de seu computador.
 
+<br>
+
 <p>Qual a diferença entre Debian e CentOs?
 
 > O Debian, além de ser mais amigável com o úsuario, possui uma ampla distribuição, logo, seu suporte é mais facilitado.
 Já o CentOs é voltada para o setor empresárial, possuindo mais estabilidade, porém com menos suporte e atualizações.
+
+<br>
 
 <p>Qual a diferença entre apt e aptitude?
 
 > O apt já vem instalado por padrão no sistema Debian.
 A principal diferença entre os dois gerenciadores é sua interface gráfica.
 
+<br>
+
 <p>O que é APPArmor?
 
 > É responsável pela liberação de úsuarios/aplicativos para a realização de determinadas tarefas.
+
+<br>
+<br>
 
 ##### Configuração Simples
 
@@ -53,12 +62,19 @@ A principal diferença entre os dois gerenciadores é sua interface gráfica.
 
 > No terminal execute o comando ```service ssh status```.
 
+<br>
+
 <p>Verifique se o sistema operacional foi escolhido corretamenta.</p>
 
 > No terminal execute o comando ```uname -a```.
+
+<br>
+<br>
 
 ##### Configuração Simples
 
 <p>Verifique se o UFW está ativado.</p>
 
 > No terminal execute o comando ```ufw status```.
+
+<br>
