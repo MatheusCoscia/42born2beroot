@@ -197,12 +197,28 @@ Além de tudo já visto até aqui, é possível citar como um exemplo de ação 
 
 <p>O que é o UFW?</p>
 
-> #.
+> O Uncomplicated Firewall é um firewall simplificado, que tem como objetivo filtrar o tráfego da internet ou de um acesso SSH.
 
 <br>
 
 <p>Adicione a porta 8080 ao UFW e verifique se ela esta ativa.</p>
 
 > No terminal execute o comando ```ufw allow 8080``` e em seguida utilize o comando ```ufw status```.
+
+<br>
+
+<p>Delete a porta 8080.</p>
+
+> O comando para deletar uma porta exige sua posição dentra da lista de regras. No exemplo abaixo, a regra 8080, a qual queremos deletar, se encontra na posição 2 e 4.
+<ol>
+	<ul>
+		<li>1	4242</li>
+		<li>2	8080</li>
+		<li>3	4242(v6)</li>
+		<li>4	8080(v6)</li>
+	</ul>
+</ol>
+
+> Ao descobrir a posição da porta 8080 execute o comando ```ufw delete #```.
 
 <br>
