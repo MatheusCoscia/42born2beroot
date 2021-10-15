@@ -104,3 +104,26 @@ A principal diferença entre os dois gerenciadores é sua interface gráfica.
 </ol>
 
 <br>
+
+<p>Crie um novo grupo chamado "evaluation" e adicione o novo úsuario a ela.</p>
+
+> No terminal execute o comando ```addgroup evaluation``` e em seguida para adicionar o úsuario ao novo grupo utilize o comando ```gpasswd -a <username> evaluation```.
+
+> Para verificar se o úsuario foi adicionado corretamente ao grupo execute o comando ```getent group evaluation```.
+
+<br>
+
+<p>Por que devemos utilizar uma política de senhas?</p>
+
+> A política de senhas serve para que você não seja hackeado, evitando assim perdas de dados ou acesso de terceiros a seu servidor.
+
+<br>
+<br>
+
+##### Nome do Host e Partições
+
+<p>Verifique se o úsuario criado pelo avaliador com o nome <login42> está presente nos grupos "sudo" e "user42".</p>
+
+> No terminal execute o comando ```getent group user42``` e em seguida o comando ```getent group sudo```.
+
+<br>
