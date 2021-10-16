@@ -358,7 +358,7 @@ echo -ne "LAST BOOT: "; who | awk '{printf $3 }' | tr '\n' ' ' && who | awk '{pr
 echo -ne "\nLVM USE: "; if cat /etc/fstab | grep -q "/dev/mapper/"; then echo "yes"; else echo "no";fi
 echo -ne "CONNEXIONS TCP: "; cat /proc/net/tcp | wc -l | wak '{print $1-1}' | tr '\n' ' ' && echo "ESTABLISHED"
 echo -ne "USER LOG: "; w | wc -l | awk '{print$1-2}'
-echo -ne "NETWORK: "; echo -n "IP" && ip route list | grep default | wak '{print $3}' | tr '\n' ' ' && echo -n "9" && ip link show | grep link/ether | awk '{print $2}' | tr '\n' ')' && printf "\n"
+echo -ne "NETWORK: "; echo -n "IP" && ip route list | grep default | awk '{print $3}' | tr '\n' ' ' && echo -n "9" && ip link show | grep link/ether | awk '{print $2}' | tr '\n' ')' && printf "\n"
 echo -ne "SUDO COUNTER: "; journalctl _COMM=sudo | grep COMMAND | wc -l | tr '\n' ' ' && echo Comands
 printf "\n"
 ```
