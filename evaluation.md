@@ -222,3 +222,103 @@ Além de tudo já visto até aqui, é possível citar como um exemplo de ação 
 > Ao descobrir a posição da porta 8080 execute o comando ```ufw delete #```.
 
 <br>
+<br>
+
+##### SSH
+
+<p>Verifique se o SSH está corretamente instalado.</p>
+
+> No terminal execute o comando ```dpkg -l | grep ssh```.
+
+<br>
+
+<p>Verifique se o SSH está funcionando corretamente.</p>
+
+> No terminal execute o comando ```service ssh status```.
+
+<br>
+
+<p>O que é o SSH?</p>
+
+> O SSH é uma ferramenta de segurança que permite a troca de dados entre um cliente e um servidor remoto. Graças a sua comunicação criptografada entre pares ele se torna o meio mais seguro e dinâmico de efetuar está atividade.
+
+<br>
+
+<p>Através de um outro dispositivo, utilize a porta 4242 e faça login com o novo usuário recém criado.</p>
+
+> Dentro de sua VM localize seu endereço de ip através do comando ```ifconfig``` ou ```ifconfig | grep inet | sed 1q```.
+
+> Através do CMD ou PowerShell de seu computador digite o comando ```ssh <username>@<ip-address> -p 4242``` e efetue o login.
+
+<br>
+
+<p>Por fim, através de um outro dispositivo, utilize a porta 4242 e tente efetuar login com o usuário root.</p>
+
+> O acesso deve ser negado graças a regra criada em nossa arquivo sshd_config.
+
+<br>
+<br>
+
+##### Monitoramento de Script
+
+<p>Como o script funciona?</p>
+
+> No terminal acesse sua pasta de script e explique seu código linha a linha...
+
+> 
+
+```
+echo -ne "ARCHITECTURE: "; uname -a
+```
+
+```
+echo -ne "CPU PHYSICAL: "; grep -c processor /proc/cpuinfo
+```
+
+```
+echo -ne "VIRTUAL CPU: "; cat /proc/cpuinfo | grep processor | wc -l
+```
+
+```
+echo -ne "MEMORY USAGE: "; free -m | awk 'NR==2{printf "%s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2}'
+```
+
+```
+echo -ne "DISK USAGE: "; df -h | awk '$NF=="/"{printf "%d/%dGB (%s)\n", $3,$2,$5}'
+```
+
+```
+echo -ne "CPU LOAD: "; top -bn1 | grep load | awk '{printf"%.2f%%\n", $(NF-2)}'
+```
+
+```
+echo -ne "LAST BOOT: "; who | awk '{printf $3 }' | tr '\n' ' ' && who | awk '{printf $4}'
+```
+
+```
+echo -ne "\nLVM USE: "; if cat /etc/fstab | grep -q "/dev/mapper/"; then echo "yes"; else echo "no";fi
+```
+
+```
+echo -ne "CONNEXIONS TCP: "; cat /proc/net/tcp | wc -l | wak '{print $1-1}' | tr '\n' ' ' && echo "ESTABLISHED"
+```
+
+```
+echo -ne "USER LOG: "; w | wc -l | awk '{print$1-2}'
+```
+
+```
+echo -ne "NETWORK: "; echo -n "IP" && ip route list | grep default | wak '{print $3}' | tr '\n' ' ' && echo -n "9" && ip link show | grep link/ether | awk '{print $2}' | tr '\n' ')' && printf "\n"
+```
+
+```
+echo -ne "SUDO COUNTER: "; journalctl _COMM=sudo | grep COMMAND | wc -l | tr '\n' ' ' && echo Comands
+```
+
+```
+printf "\n"
+```
+
+> Para rodar o código sem precisar esperar os 10min execute o comando ```bash monitoring.sh```
+
+<br>
