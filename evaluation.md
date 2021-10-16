@@ -264,7 +264,7 @@ Além de tudo já visto até aqui, é possível citar como um exemplo de ação 
 <p>Como o script funciona?</p>
 <p>No terminal acesse sua pasta de script e explique seu código linha a linha...</p><br>
 
-> uname -a | busca as informações sobre o sistema
+> uname -a | busca as informações sobre o sistema.
 
 ```
 echo -ne "ARCHITECTURE: "; uname -a
@@ -272,7 +272,7 @@ echo -ne "ARCHITECTURE: "; uname -a
 
 <br>
 
-> grep -c | imprime a contagem de linhas do arquivo
+> grep -c | imprime a contagem de linhas do arquivo.
 
 ```
 echo -ne "CPU PHYSICAL: "; grep -c processor /proc/cpuinfo
@@ -280,8 +280,8 @@ echo -ne "CPU PHYSICAL: "; grep -c processor /proc/cpuinfo
 
 <br>
 
-> grep | busca pela palavra processor
-wc -l | imprime a quantidade de linhas
+> grep | busca pela palavra processor;<br>
+wc -l | imprime a quantidade de linhas.
 
 ```
 echo -ne "VIRTUAL CPU: "; cat /proc/cpuinfo | grep processor | wc -l
@@ -289,9 +289,9 @@ echo -ne "VIRTUAL CPU: "; cat /proc/cpuinfo | grep processor | wc -l
 
 <br>
 
-> free -m | busca as informações da memória ram
-awk NR==2 | seleciona somente as colunas já processadas
-printf | imprime na tela as informações passadas como parâmetro
+> free -m | busca as informações da memória ram;<br>
+awk NR==2 | seleciona somente as colunas já processadas;<br>
+printf | imprime na tela as informações passadas como parâmetro.
 
 ```
 echo -ne "MEMORY USAGE: "; free -m | awk 'NR==2{printf "%s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2}'
@@ -299,9 +299,9 @@ echo -ne "MEMORY USAGE: "; free -m | awk 'NR==2{printf "%s/%sMB (%.2f%%)\n", $3,
 
 <br>
 
-> df -h | busca as informações sobre o disco de memória
-awk NF==/ | seleciona as colunas que estão sendo processadas
-printf | imprime na tela as informações passadas como parâmetro
+> df -h | busca as informações sobre o disco de memória;<br>
+awk NF==/ | seleciona as colunas que estão sendo processadas;<br>
+printf | imprime na tela as informações passadas como parâmetro.
 
 ```
 echo -ne "DISK USAGE: "; df -h | awk '$NF=="/"{printf "%d/%dGB (%s)\n", $3,$2,$5}'
@@ -309,9 +309,9 @@ echo -ne "DISK USAGE: "; df -h | awk '$NF=="/"{printf "%d/%dGB (%s)\n", $3,$2,$5
 
 <br>
 
-> top -bn1 | durante 'n' vezes envie um arquivo para outro
-grep | busca pela palavra load
-awk printf | manipula o texto e imprime somente os números
+> top -bn1 | durante 'n' vezes envie um arquivo para outro;<br>
+grep | busca pela palavra load;<br>
+awk printf | manipula o texto e imprime somente os números.
 
 ```
 echo -ne "CPU LOAD: "; top -bn1 | grep load | awk '{printf"%.2f%%\n", $(NF-2)}'
@@ -319,18 +319,18 @@ echo -ne "CPU LOAD: "; top -bn1 | grep load | awk '{printf"%.2f%%\n", $(NF-2)}'
 
 <br>
 
-> who | quem é o usuário logado
-awk printf | imprime a coluna selecionada
-tr | substitui um caractere por outro
+> who -b | horário do último boot do sistema;<br>
+awk printf | imprime a coluna selecionada;<br>
+tr | substitui um caractere por outro.
 
 ```
-echo -ne "LAST BOOT: "; who | awk '{printf $3 }' | tr '\n' ' ' && who | awk '{printf $4}'
+echo -ne "LAST BOOT: "; who -b | awk '{printf $3 }' | tr '\n' ' ' && who -b | awk '{printf " " $4}'
 ```
 
 <br>
 
-> if fi | demonstra uma condição específica
-grep -q | verifica se existe algo no diretório
+> if fi | demonstra uma condição específica;<br>
+grep -q | verifica se existe algo no diretório.
 
 ```
 echo -ne "\nLVM USE: "; if cat /etc/fstab | grep -q "/dev/mapper/"; then echo "yes"; else echo "no";fi
@@ -338,9 +338,9 @@ echo -ne "\nLVM USE: "; if cat /etc/fstab | grep -q "/dev/mapper/"; then echo "y
 
 <br>
 
-> wc -l | realiza a contagem de linhas
-awk printf | imprime o texto selecionado
-tr | substitui os caracteres
+> wc -l | realiza a contagem de linhas;<br>
+awk printf | imprime o texto selecionado;<br>
+tr | substitui os caracteres.
 
 ```
 echo -ne "CONNEXIONS TCP: "; cat /proc/net/tcp | wc -l | awk '{print $1-1}' | tr '\n' ' ' && echo "ESTABLISHED"
@@ -348,9 +348,9 @@ echo -ne "CONNEXIONS TCP: "; cat /proc/net/tcp | wc -l | awk '{print $1-1}' | tr
 
 <br>
 
-> w | qual usuário esta logado no mento
-wc -l | realiza a contagem de linhas
-awk print | imprime o texto selecionado
+> w | qual usuário esta logado no mento;<br>
+wc -l | realiza a contagem de linhas;<br>
+awk print | imprime o texto selecionado.
 
 ```
 echo -ne "USER LOG: "; w | wc -l | awk '{print $1-2}'
@@ -358,10 +358,10 @@ echo -ne "USER LOG: "; w | wc -l | awk '{print $1-2}'
 
 <br>
 
-> echo -n | demonstra o argumento
-grep | busca a palavra
-awk print | imprime o texto selecionado
-tr | substitui os caracteres
+> echo -n | demonstra o argumento;<br>
+grep | busca a palavra;<br>
+awk print | imprime o texto selecionado;<br>
+tr | substitui os caracteres.
 
 ```
 echo -ne "NETWORK: "; echo -n "IP" && ip route list | grep default | awk '{print $3}' | tr '\n' ' ' && echo -n "9" && ip link show | grep link/ether | awk '{print $2}' | tr '\n' ')' && printf "\n"
@@ -369,10 +369,10 @@ echo -ne "NETWORK: "; echo -n "IP" && ip route list | grep default | awk '{print
 
 <br>
 
-> journalctl _COMM= | registra os comandos realizados por um grupo
-grep | busca por uma palavra
-wc -l | realiza a contagem de linhas
-tr | substitui os caracteres
+> journalctl _COMM= | registra os comandos realizados por um grupo;<br>
+grep | busca por uma palavra;<br>
+wc -l | realiza a contagem de linhas;<br>
+tr | substitui os caracteres.
 
 ```
 echo -ne "SUDO COUNTER: "; journalctl _COMM=sudo | grep COMMAND | wc -l | tr '\n' ' ' && echo Comands
@@ -380,7 +380,7 @@ echo -ne "SUDO COUNTER: "; journalctl _COMM=sudo | grep COMMAND | wc -l | tr '\n
 
 <br>
 
-> printf | imprime uma quebra de linha
+> printf | imprime uma quebra de linha.
 
 ```
 printf "\n"
