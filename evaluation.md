@@ -400,7 +400,11 @@ printf "\n"
 
 <p>Como o Contrab foi configurado?</p>
 
-> O Crontab é configurado informando os minutos, horas, dias, meses e dias da semana em que você desneha que o script configurado seja rodado.
+> O Crontab é configurado informando os minutos, horas, dias, meses e semana em que você desneha que o script configurado seja rodado.
+
+> A configuração foi feita de forma a qual a cada 10 minutos de todas as horas, dias, meses e semanas o nosso script seja executado.
+
+> Para conferir o crontab utilize o comando ```crontab -e```.
 
 <br>
 <br>
