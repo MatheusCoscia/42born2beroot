@@ -391,3 +391,22 @@ printf "\n"
 > Para rodar o código sem precisar esperar os 10min execute o comando ```bash monitoring.sh```
 
 <br>
+
+<p>O que é o Cron?</p>
+
+> O Cron é um programa que atua em segundo plano criando schedules, que atuam de acordo com as configurações criadas por você.
+
+<br>
+
+<p>Como o Contrab foi configurado?</p>
+
+> O Crontab é configurado informando os minutos, horas, dias, meses e dias da semana em que você desneha que o script configurado seja rodado.
+
+<br>
+<br>
+
+##### CRÉDITOS
+
+<p>MCoscia<br>
+Matheus Coscia / / designer gráfico</p>
+<p><a href="https://github.com/gsilva-v">gsilva-v</a></p>

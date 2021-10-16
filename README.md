@@ -21,8 +21,7 @@
 <p>MCoscia<br>
 Matheus Coscia / / designer gráfico</p>
 
-<p><b>Colaboradores</b><br>
-<a href="https://github.com/gsilva-v">gsilva-v</a><br>
+<p><b>Referências</b><br>
 <a href="https://github.com/vangoncalez/42born2beroot">vangoncalez</a><br>
 <a href="https://github.com/Matth0s/42_born2beroot/blob/master/Born2beroot.pdf">matth0s</a><br>
 <a href="https://github.com/hanshazairi/42-born2beroot#installation">hanshazairi</a></p>
