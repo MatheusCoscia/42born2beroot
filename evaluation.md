@@ -172,11 +172,11 @@ Além de tudo já visto até aqui, é possível citar como um exemplo de ação 
 
 <p>Acesse a pasta /var/log/sudo e verifique se existe o historico de comandos utilizados pelo grupo Sudo.</p>
 
-> Acesse a pasta ```/var/log/sudo/00/00``` e confira o historica de comandos.
+> Acesse a pasta ```cat /var/log/sudo/sudo.log``` e confira o historica de comandos.
 
 > Em seu terminal execute o comando ```apt update```.
 
-> Na pasta ```/var/log/sudo/00/00``` confira se um novo diretório foi criado.
+> Na pasta ```cat /var/log/sudo/sudo.log``` confira se um novo diretório foi criado.
 
 <br>
 <br>
