@@ -165,7 +165,7 @@ A vantagem de sua utilização se da graças a facilidade de redimensionamento d
 
 <p>O que é o Sudo?</p>
 
-> O sudo é um "super usuário", ou seja, um administrador que pode executar tarefas sem a necessidade do comando ```sudo```.
+> O sudo é um "super usuário", ou seja, um administrador que pode executar tarefas restritas ao usuário root.
 Além de tudo já visto até aqui, é possível citar como um exemplo de ação do Sudo o comando ```apt update```.
 
 <br>
