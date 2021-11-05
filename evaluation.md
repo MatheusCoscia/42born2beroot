@@ -405,7 +405,9 @@ $		crontab -e
 ```
 <p>A segunda maneira para desativar o cron é, no próprio terminal, escrever a seguinte linha de comando:</p>
 
-> $		etc/init.d/cron stop
+```
+$		etc/init.d/cron stop
+```
 
 <br>
 
