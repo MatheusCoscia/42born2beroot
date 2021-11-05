@@ -266,6 +266,8 @@ Além de tudo já visto até aqui, é possível citar como um exemplo de ação 
 
 <details>
 
+<br>
+
 > uname -a | busca as informações sobre o sistema.
 
 ```
@@ -391,6 +393,18 @@ printf "\n"
 <br>
 
 > Para rodar o código sem precisar esperar os 10min execute o comando ```bash monitoring.sh```
+
+<br>
+
+<p>Ativando e desativando o Cron</p>
+<p>Uma das maneiras de desativar o cron é acessando suas configurações e comentando a linha de código referente a regra criada.</p>
+
+> $		crontab -e
+23		#*/10 * * * * sh path/to/script
+
+<p>A segunda maneira para desativar o cron é, no próprio terminal, escrever a seguinte linha de comando:</p>
+
+> $		etc/init.d/cron stop
 
 <br>
 
