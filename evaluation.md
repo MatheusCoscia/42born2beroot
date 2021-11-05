@@ -397,17 +397,10 @@ printf "\n"
 <br>
 
 <p>Ativando e desativando o Cron</p>
-<p>Uma das maneiras de desativar o cron é acessando suas configurações e comentando a linha de código referente a regra criada.</p>
 
-```
-$		crontab -e
-23		#*/10 * * * * sh path/to/script
-```
-<p>A segunda maneira para desativar o cron é, no próprio terminal, escrever a seguinte linha de comando:</p>
+> Uma das maneiras de desativar o cron é acessando suas configurações através do comando ```crontab -e``` e comentando a linha de código 23.
 
-```
-$		etc/init.d/cron stop
-```
+>A segunda maneira para desativar o cron é executando o seguinte comando: ```etc/init.d/cron stop```.
 
 <br>
 
