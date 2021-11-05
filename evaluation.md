@@ -262,8 +262,9 @@ Além de tudo já visto até aqui, é possível citar como um exemplo de ação 
 ##### Monitoramento de Script
 
 <p>Como o script funciona?</p>
+<p>No terminal acesse sua pasta de script e explique seu código linha a linha...</p><br>
+
 <details>
-<sumary>No terminal acesse sua pasta de script e explique seu código linha a linha...</sumary><br>
 
 > uname -a | busca as informações sobre o sistema.
 
